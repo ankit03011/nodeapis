@@ -1,0 +1,51 @@
+//.1 sabse pahle [npm init -y] command ko terminal me chalayege
+     jo hume package.json file dega- or npm ko initilize krega
+
+     package.json- hmare project ya app ki information ko contain krega, 
+     information jaise(app ka naam, dependencies name, dependencies version, auther name, etc.)
+
+//.2 second hum express ko npm se install krege [npm i express]
+     jis se express package install hoga jiska version or naam hume package.json me dependencies me dikhega
+     sath hi node_modules or package-lock.json file bhi ban jayegi.
+
+     package-lock.json humare project or dependencies ki detailed information ko rakhega.
+     node_modules package ke code ko store krta hai. yah sabse badi file hoti hai kyuki isme sara code hota hai.
+
+//.3 third step me hum ek file root directory me banayege like- index.js. hum yahi express se server create krege-
+
+//.4 index.js me express ko import krege.
+
+ note- import statment ka use krne ke liye aapko package.json file me main ke neech ["type":"module"] ko likhege
+ kyuki import statment module me use kiya jata hai, agar aap require ka use krte hai tab aapko kuchh changes nhi 
+ krne hoge
+
+//.5 after importing express in index.js- aapko ek variable jaise app me express ko store krna hoge-
+     
+     let app = express();
+
+//6. ab express ki listen method ka use krke hum server ko yah batayege ki wo kis port me chalayege
+        kyuki humare pass total server port 65,535 hai inme se hume ek port number par server ko chalana hoga
+        
+        listen method do arguments leti hai pahla port dusra callback function.
+        callback function ek msg console krega jo inform krega ki server chal raha hai.
+
+
+
+                                     ~http request~
+        C => Create                 => POST (insert)
+        R => retrive / read         => GET (read)
+        U => Update                 => PUT/PATCH    (put- complete update), (patch- partically update)
+        D => Delete                 => Delete
+
+
+    URL(Uniform Resource Locator) => ex. http://localhost:8000/getUser
+    Route- end point of url => ex. http://localhost:8000/getUser => /getUser
+
+
+//7. Cors policy - cross origin Resource sharing policy [npm i cors]
+//8. nodemon- server automation [npm i nodemon]
+   nodemon istall hone ke baad aapko package.json me ja kr script ke andar ["start":"nodemon index.js"] yaha index.js ki
+   jagha aap us file ka naam likhega jaha server likha hua hai.
+
+   last me terminal me [npm start] command chalani hogi
+   isko rokne ke liye terminal me click krke ctrl+c press krna hoga

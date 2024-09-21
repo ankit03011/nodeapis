@@ -1,0 +1,25 @@
+import express from 'express';          //--1. sabse pahle express ko import kiya npm i express ke baad
+import cors from 'cors'                 //--
+
+let app = express();                    //--2  express ko ek app variable me store kiye
+app.use(cors())
+let port = 8000;
+
+let user = [
+    {id:1, name: "ankit"},
+    {id:2, name: "ashu"},
+    {id:3, name: "anshika"},
+    {id:4, name: "manisha"},
+    {id:5, name: "shakkhu"},
+]
+
+
+app.get('/getUser', (req, res)=>{
+    res.json(user)
+    console.log(user)
+})
+
+
+app.listen(port, ()=>{                                               //--3  express ki method listen ka ue krte huye port number or ek callback function diya
+    console.log(`server is running on http://localhost:${port}`)    //     jo yah batayega ki server kis port pe chal raha hai
+})
